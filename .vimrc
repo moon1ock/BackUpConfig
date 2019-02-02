@@ -6,10 +6,13 @@ Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-sensible'
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'koirand/cocopon/iceberg.vim'
+Plug 'cocopon/iceberg.vim'
 Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree'
+Plug 'matze/vim-move'
 call plug#end()
 
 " keybinds go here
@@ -56,5 +59,6 @@ let NERDTreeShowHidden=1
 let &t_SI="\e[6 q"
 let &t_SR="\e[4 q"
 let &t_EI="\e[2 q"
-
-
+let g:move_key_modifier = 'C'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
