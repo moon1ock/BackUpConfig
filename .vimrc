@@ -1,25 +1,25 @@
-" plugins
+"dont try to be vi compatible
+set nocompatible
+"For plugins to load correctly
+filetype plugin indent on
+
 call plug#begin()
+" plugins
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-sensible'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'oblitum/rainbow'
+Plug 'easymotion/vim-easymotion'
 Plug 'cocopon/iceberg.vim'
 Plug 'tpope/vim-commentary'
 Plug 'bling/vim-bufferline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree'
 Plug 'matze/vim-move'
-"Snippets
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'neomake/neomake'
+Plug 'enricobacis/vim-airline-clock'
 call plug#end()
 
 " keybinds go here
@@ -32,13 +32,32 @@ nn <bs> :let @/=""<cr>
 nn <leader>l :setl nu!\|setl rnu!<cr>
 nn <leader>n :NERDTreeToggle<cr>
 
-nn <buffer> <F12> :w\|exec '!python' shellescape(@%, 1)<cr>
 
-" general options
-color iceberg
+" Colors
+color dracula
 " color solarized
+
+"Last line
 set showcmd
+set showmode
+"Rendering
+set ttyfast
+
+
+" Show file stats
+set ruler
+
+" Blink cursor on error instead of beeping (grr)
+set visualbell
+
+
+" Turn on syntax highlighting
+syntax on
+
+"Text wrapping
+" set wrap!
 set nowrap
+set wrap
 set wildmode=longest:full,list:full
 set hlsearch
 set incsearch
@@ -55,40 +74,24 @@ set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title
 set noerrorbells
+set foldmethod=indent
 set nobackup
 set noswapfile
 set cpt+=k
 set so=999
-set foldmethod=indent
 set nofoldenable
-set wrap
+" set cmdheight=
 
-let g:indentLine_color_term=239
+let g:indentLine_color_term=20
 let NERDTreeShowHidden=1
 let &t_SI="\e[6 q"
 let &t_SR="\e[4 q"
 let &t_EI="\e[2 q"
 let g:move_key_modifier = 'C'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-
-
-
-
-""Syntax check for C++"
-"execute pathogen#infect()
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-
-
-
-"NEOMAKE Syntax"
-
-call neomake#configure#automake('w')
-let g:neomake_open_list = 2
+" let g:airline_powerline_fonts = 1
+"indent line for tabs
+" set list lcs=tab:\┆\*SPACEGOESHERE*
+"Rainbow parenthesis
+" let g:rainbow_active=1
 

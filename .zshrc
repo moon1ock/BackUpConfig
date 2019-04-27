@@ -8,8 +8,14 @@ export ZSH="/Users/andriylunin/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+
 ZSH_THEME="robbyrussell"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
+
+
+
+# ZSH_THEME="agnoster"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -62,37 +68,46 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(
   git
   zsh-autosuggestions
+  web-search
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+#
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias la='ls -a'
+alias hack='python3 /Users/andriylunin/Documents/CS_work/hackertyper.py'
+alias v='vim'
+alias p='python3'
+alias G='googler -n 11'
+alias N='googler -N'
+alias zshrc='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
+alias nvimrc='nvim ~/.nvimrc'
+alias asdfasdf='open /Users/andriylunin/.safe/Cards.pdf'
+alias please='sudo'
+alias r="./a.out"
+alias ∆="ps -ax | grep"
+alias ø="htop"
+alias cs="cd /Users/andriylunin/Documents/CS_work"
+alias lab="cd /Users/andriylunin/Documents/CS_work/C++Lab"
+# alias Mischief_managed!="ps -ax | grep iTerm2 | grep -v grep | awk '{print $2}' | xargs kill"
+
+
+#Time on the right
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+RPROMPT="[%D{%y/%m/%f}|%@]"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
