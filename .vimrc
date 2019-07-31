@@ -34,7 +34,8 @@ nn <leader>n :NERDTreeToggle<cr>
 
 
 " Colors
-color dracula
+" color dracula
+colo iceberg
 " color solarized
 
 "Last line
@@ -48,7 +49,7 @@ set ttyfast
 set ruler
 
 " Blink cursor on error instead of beeping (grr)
-set visualbell
+" set visualbell
 
 
 " Turn on syntax highlighting
@@ -89,6 +90,7 @@ let &t_SR="\e[4 q"
 let &t_EI="\e[2 q"
 let g:move_key_modifier = 'C'
 let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#ale#enabled = 1
 " let g:airline_powerline_fonts = 1
 "indent line for tabs
 " set list lcs=tab:\┆\*SPACEGOESHERE*

@@ -96,12 +96,17 @@ alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias nvimrc='nvim ~/.nvimrc'
 alias asdfasdf='open /Users/andriylunin/.safe/Cards.pdf'
-alias please='sudo'
+alias fuck='sudo'
+alias please='sudo !!'
+alias nuke='kill'
 alias r="./a.out"
 alias ∆="ps -ax | grep"
 alias ø="htop"
 alias cs="cd /Users/andriylunin/Documents/CS_work"
 alias lab="cd /Users/andriylunin/Documents/CS_work/C++Lab"
+alias wtf="man"
+alias die="shutdown now"
+alias marko="echo polo"
 # alias Mischief_managed!="ps -ax | grep iTerm2 | grep -v grep | awk '{print $2}' | xargs kill"
 
 
