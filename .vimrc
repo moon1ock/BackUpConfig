@@ -8,7 +8,6 @@ call plug#begin()
 Plug 'junegunn/goyo.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-sensible'
-"Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'oblitum/rainbow'
 Plug 'easymotion/vim-easymotion'
@@ -20,7 +19,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'matze/vim-move'
 Plug 'enricobacis/vim-airline-clock'
+" Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+
 
 " keybinds go here
 nn <SPACE> <nop>
@@ -97,11 +99,16 @@ let &t_SI="\e[6 q"
 let &t_SR="\e[4 q"
 let &t_EI="\e[2 q"
 let g:move_key_modifier = 'C'
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
+set guifont=DejaVu\ Sans:s12
 " let g:airline#extensions#ale#enabled = 1
 " let g:airline_powerline_fonts = 1
-"indent line for tabs
-" set list lcs=tab:\┆\*SPACEGOESHERE*
-"Rainbow parenthesis
-" let g:rainbow_active=1
+""indent line for tabs
+""Rainbow parenthesis
+"let g:rainbow_active=1
+
+
+
+
+
 

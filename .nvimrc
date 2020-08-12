@@ -44,13 +44,6 @@ let g:move_key_modifier = 'C'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-let mapleader=' '
-ino jk <esc>
-ino kj <esc>
-nn ^H :let @/=""<cr>
-nn <bs> :let @/=""<cr>
-nn <leader>l :setl nu!\|setl rnu!<cr>
-
 
 " cool colo 256_noir
 "
